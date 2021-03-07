@@ -1,0 +1,376 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.contact {
+    /*  position: ; */
+    min-height: 100vh;
+    padding: 100px 100px;
+    display: flex;
+    justify-content: centre;
+    align-items: center;
+    flex-direction: column;
+    background: url(index_css/img4.jpg);
+    background-size: cover;
+}
+
+.contact .content {
+    max-width: 800px;
+    text-align: center;
+}
+
+.contact .content h2 {
+    font-size: 36px;
+    font-weight: 500;
+    color: blueviolet;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.container .contactinfo {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container .contactinfo .box {
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+
+.container .contactinfo .box .icon {
+    min-width: 60px;
+    height: 60px;
+    background: #fff;
+    justify-content: centre;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+}
+
+.container .contactinfo .box .text {
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #fff;
+    flex-direction: column;
+    font-weight: 300;
+}
+
+.container .contactinfo .box .text h3 {
+    font-weight: 500;
+    color: #00bcd4;
+}
+
+.contactForm h2 {
+    font-size: 30px;
+    color: #333;
+    font-weight: 500;
+}
+
+.contactForm .inputBox {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.contactForm .inputBox input,
+.contactForm .inputBox textarea {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+}
+
+.contactForm .inputBox span {
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+
+.contactForm .inputBox input:focus~span,
+.contactForm .inputBox input:valid~span,
+.contactForm .inputBox textarea:focus~span,
+.contactForm .inputBox textarea:valid~span {
+    color: #e91e63;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+
+.contactForm.inputBox input[type="submit"] {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 8px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #00bcd4;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: .3s ease background-color;
+}
+
+.contactForm.inputBox input[type="submit"]:hover {
+    background-color: #e6683c;
+}
+
+@media (max-width: 991px) {
+    .contact {
+        padding: 50px;
+    }
+    .container {
+        flex-direction: column;
+    }
+    .contact .contactinfo {
+        margin-bottom: 40px;
+    }
+    .container .contactinfo {
+        width: 100%;
+    }
+}
+
+html {
+    font-size: 10px;
+    font-family: "Roboto", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    font-size: large;
+}
+
+section {
+    padding: 10rem 0;
+    background-color: #fff;
+    flex-direction: column;
+}
+
+.contactForm #status {
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    padding: 10px;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+.contactForm #status.success {
+    background-color: #45e19f;
+    animation: status 4s ease forwards;
+}
+
+.contactForm #status.error {
+    background-color: rgb(250, 129, 92);
+    color: white;
+    animation: status 4s ease forwards;
+}
+
+@keyframes status {
+    0% {
+        opacity: 1;
+        pointer-events: all;
+    }
+    50% {
+        opacity: 1;
+        pointer-events: all;
+    }
+    100% {
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
+
+/* .heading {
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    letter-spacing: 3px;
+    margin-right: -3px;
+    margin-bottom: 5rem;
+    text-align: centre;
+    color: #333;
+    position: relative;
+}
+
+.heading::after {
+    content: "";
+    width: 10rem;
+    height: .8rem;
+    background-color: #45e19f;
+    position: absolute;
+    bottom: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2rem;
+}
+ */
+
+.card-wrapper {
+    display: flex;
+    padding-left: -50%;
+    align-items: left;
+    align-content: left;
+    flex-direction: column;
+}
+
+.card {
+    width: 32rem;
+    background-color: #abeef8;
+    display: flex;
+    flex-direction: column;
+    padding-left: -100%;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.card .card-img {
+    width: 100%;
+    height: 26rem;
+    object-fit: cover;
+    clip-path: polygon(0 0, 100% 1%, 100% 72%, 0% 100%);
+}
+
+.profile-img {
+    width: 30rem;
+    height: 30rem;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-top: -11rem;
+    z-index: 999;
+    border: 1 rem solid #ebeef8;
+}
+
+.card h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin: 1.5rem 0;
+}
+
+.job-title {
+    color: #777;
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.about {
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+    text-align: center;
+    color: #333;
+}
+
+.card .btn {
+    padding: 1rem 2.5rem;
+    background-color: #445ae3;
+    border-radius: 2rem;
+    margin: 1rem 0;
+    text-transform: uppercase;
+    color: #eee;
+    font-size: 1.4rem;
+    transition: all .5s;
+}
+
+.card .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: .5rem .5rem 2rem rgba(0, 0, 0, .2);
+}
+
+.card .btn:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+.social-media {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2rem 0;
+    margin-top: 1.5rem;
+    border-top: 1px solid rgba(0, 0, 0, .1);
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.social-media i {
+    font-size: 3rem;
+    transition: color .5s;
+}
+
+.fa-facebook-square {
+    color: #3b5999;
+}
+
+.fa-twitter-square {
+    color: #55acee;
+}
+
+.fa-instagram {
+    color: #e6683c;
+}
+
+.fa-google-plus-square {
+    color: #dd4b39;
+}
+
+.fa-facebook-square:hover,
+.fa-twitter-square:hover,
+.fa-instagram:hover,
+.fa-google-plus-square:hover {
+    color: #45e19f;
+}
+
+@media screen and (min-width: 700px) {
+    .card-wrapper {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .card {
+        margin: 2rem;
+        transition: transform .5s;
+    }
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    .card:nth-child(1) {
+        animation: fadeIn .5s .5s backwards;
+    }
+    .card:nth-child(2) {
+        animation: fadeIn .5s 1s backwards;
+    }
+    .card:hover {
+        transform: scale(1.1);
+    }
+}
