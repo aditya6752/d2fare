@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D2FARE</title>
+    <link rel="stylesheet" href="index_css/nav bar carousel.css">
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo"><strong>D2FARE</strong></a>
+        <ul>
+            <li><a href="home.html"><strong>Home</strong></a></li>
+            <li><a href="calculate.html">Calculate it</a></li>
+            <li><a href="contact1.html">Get in touch</a></li>
+        </ul>
+    </header>
+    <section class="banner">
+        <div class="imgBx">
+            <img src="index_css/img1.jpg" class="active">
+            <img src="index_css/img2.jpg">
+            <img src="index_css/img3.jpg">
+            <img src="index_css/img4.jpg">
+        </div>
+        <ul class="controls">
+            <li onClick="previousSlide();previousSlideText();"></li>
+            <li onClick="nextSlide();nextSlideText()"></li>
+        </ul>
+        <!-- //this is created to put the drawing bar thibng -->
+    </section>
+</body>
+<script type="text/javascript">
+    const imgBx = document.querySelector('.imgBx');
+    const slides = imgBx.getElementsByTagName('img');
+    var i = 0;
+
+    function nextSlide() {
+        slides[i].classList.remove('active');
+        i = (i + 1) % slides.length;
+        slides[i].classList.add('active');
+    }
+
+    function previousSlide() {
+        slides[i].classList.remove('active');
+        // if(i > 0)
+        //     i = (i - 1) % slides.length;
+        // else
+        //     i = slides.length - 1;
+        i = (i - 1 + slides.length) % slides.length;
+        slides[i].classList.add('active');
+    }
+
+    const contentBx = document.querySelector('.contentBx');
+    const slidesText = contentBx.getElementsByTagName('div');
+    var j = 0;
+
+    function nextSlideText() {
+        slidesText[j].classList.remove('active');
+        j = (j + 1) % slidesText.length;
+        slidesText[j].classList.add('active');
+    }
+
+    function previousSlideText() {
+        slidesText[j].classList.remove('active');
+        j = (j - 1 + slidesText.length) % slidesText.length;
+        slidesText[i].classList.add('active');
+    }
+</script>
+
+</html>
